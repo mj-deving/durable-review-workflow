@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="bun test" tests="30" assertions="106" failures="0" skipped="0" time="4.498039">
+  <testsuite name="test/crash.test.ts" file="test/crash.test.ts" tests="2" assertions="7" failures="0" skipped="0" time="3.947519" hostname="">
+    <testcase name="killed after the outbox write: recovery succeeds and the message exists once" classname="" time="1.978711" file="test/crash.test.ts" line="35" assertions="4" />
+    <testcase name="control: the same crash with a naive append publishes twice" classname="" time="1.965325" file="test/crash.test.ts" line="42" assertions="3" />
+  </testsuite>
+  <testsuite name="test/outbox.test.ts" file="test/outbox.test.ts" tests="4" assertions="6" failures="0" skipped="0" time="0.00395" hostname="">
+    <testcase name="idempotent publish: five retries, one message" classname="" time="0.001991" file="test/outbox.test.ts" line="11" assertions="2" />
+    <testcase name="idempotent publish refuses a different message under the same key" classname="" time="0.00077" file="test/outbox.test.ts" line="18" assertions="1" />
+    <testcase name="naive publish duplicates on retry (the control)" classname="" time="0.000263" file="test/outbox.test.ts" line="24" assertions="1" />
+    <testcase name="publish mode typos throw instead of picking a mode" classname="" time="0.000054" file="test/outbox.test.ts" line="30" assertions="2" />
+  </testsuite>
+  <testsuite name="test/workflow.test.ts" file="test/workflow.test.ts" tests="24" assertions="93" failures="0" skipped="0" time="0.540375" hostname="">
+    <testsuite name="review gate cannot be skipped" file="test/workflow.test.ts" line="37" tests="17" assertions="65" failures="0" skipped="0" time="0.218" hostname="">
+      <testcase name="no payload: stays at review, nothing published, run still resumable" classname="review gate cannot be skipped" time="0.035454" file="test/workflow.test.ts" line="47" assertions="5" />
+      <testcase name="empty payload: stays at review, nothing published, run still resumable" classname="review gate cannot be skipped" time="0.014087" file="test/workflow.test.ts" line="47" assertions="6" />
+      <testcase name="unknown decision: stays at review, nothing published, run still resumable" classname="review gate cannot be skipped" time="0.013581" file="test/workflow.test.ts" line="47" assertions="6" />
+      <testcase name="reject without comment: stays at review, nothing published, run still resumable" classname="review gate cannot be skipped" time="0.01292" file="test/workflow.test.ts" line="47" assertions="6" />
+      <testcase name="reject with blank comment: stays at review, nothing published, run still resumable" classname="review gate cannot be skipped" time="0.012737" file="test/workflow.test.ts" line="47" assertions="6" />
+      <testcase name="approve with smuggled text: stays at review, nothing published, run still resumable" classname="review gate cannot be skipped" time="0.011775" file="test/workflow.test.ts" line="47" assertions="6" />
+      <testcase name="timeTravel to publish on a fresh run is refused" classname="review gate cannot be skipped" time="0.00928" file="test/workflow.test.ts" line="62" assertions="2" />
+      <testcase name="timeTravel to publish with a forged review result is refused" classname="review gate cannot be skipped" time="0.010037" file="test/workflow.test.ts" line="73" assertions="3" />
+      <testcase name="timeTravel to review (dot path) with forged content publishes none of it" classname="review gate cannot be skipped" time="0.014843" file="test/workflow.test.ts" line="92" assertions="2" />
+      <testcase name="timeTravel to review (array path) with forged content publishes none of it" classname="review gate cannot be skipped" time="0.010952" file="test/workflow.test.ts" line="92" assertions="2" />
+      <testcase name="timeTravel to review shows the reviewer the recorded draft, not the forged one" classname="review gate cannot be skipped" time="0.012292" file="test/workflow.test.ts" line="99" assertions="2" />
+      <testcase name="timeTravel to draft cannot change the question or a draft already shown" classname="review gate cannot be skipped" time="0.014543" file="test/workflow.test.ts" line="105" assertions="3" />
+      <testcase name="timeTravel to draft a later attempt without a rejection is refused" classname="review gate cannot be skipped" time="0.011523" file="test/workflow.test.ts" line="113" assertions="4" />
+      <testcase name="a run named like another run&apos;s draft record cannot use that record as an approval" classname="review gate cannot be skipped" time="0.010048" file="test/workflow.test.ts" line="125" assertions="3" />
+      <testcase name="an approved run cannot be republished with different text" classname="review gate cannot be skipped" time="0.012417" file="test/workflow.test.ts" line="138" assertions="3" />
+      <testcase name="resuming the publish step directly is refused" classname="review gate cannot be skipped" time="0.009041" file="test/workflow.test.ts" line="147" assertions="3" />
+      <testcase name="a valid approval publishes exactly once" classname="review gate cannot be skipped" time="0.010704" file="test/workflow.test.ts" line="157" assertions="3" />
+    </testsuite>
+    <testsuite name="reject loops back to a redraft" file="test/workflow.test.ts" line="165" tests="2" assertions="12" failures="0" skipped="0" time="0.034" hostname="">
+      <testcase name="the comment reaches the drafter and the published text" classname="reject loops back to a redraft" time="0.014117" file="test/workflow.test.ts" line="166" assertions="7" />
+      <testcase name="stops after 3 drafts without publishing" classname="reject loops back to a redraft" time="0.020526" file="test/workflow.test.ts" line="178" assertions="5" />
+    </testsuite>
+    <testsuite name="edit" file="test/workflow.test.ts" line="189" tests="2" assertions="7" failures="0" skipped="0" time="0.022" hostname="">
+      <testcase name="an edit with a retrieved citation is published as edited" classname="edit" time="0.011686" file="test/workflow.test.ts" line="190" assertions="3" />
+      <testcase name="an edit citing a chunk that was not retrieved is sent back to the reviewer" classname="edit" time="0.011089" file="test/workflow.test.ts" line="198" assertions="4" />
+    </testsuite>
+    <testsuite name="citation guard in the draft step" file="test/workflow.test.ts" line="207" tests="2" assertions="6" failures="0" skipped="0" time="0.018" hostname="">
+      <testcase name="a draft citing an unretrieved chunk is replaced by the refusal fallback" classname="citation guard in the draft step" time="0.009628" file="test/workflow.test.ts" line="208" assertions="3" />
+      <testcase name="an unknown question drafts a refusal, not an uncited answer" classname="citation guard in the draft step" time="0.009249" file="test/workflow.test.ts" line="214" assertions="3" />
+    </testsuite>
+    <testsuite name="persistence" file="test/workflow.test.ts" line="221" tests="1" assertions="3" failures="0" skipped="0" time="0.016" hostname="">
+      <testcase name="a second Mastra instance on the same files resumes the suspended run" classname="persistence" time="0.016894" file="test/workflow.test.ts" line="222" assertions="3" />
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,27 @@
+{
+  "name": "durable-review-workflow",
+  "version": "0.1.0",
+  "description": "A cited-answer workflow on Mastra that survives SIGKILL and waits for a human before it publishes.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "gate": "bun scripts/gate-bypass.ts",
+    "report:tests": "bun scripts/test-report.ts",
+    "crash": "bun scripts/crash-matrix.ts",
+    "live": "bun scripts/live.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "check": "bun run typecheck && bun test"
+  },
+  "dependencies": {
+    "@mastra/core": "^1.82.0",
+    "@mastra/libsql": "^1.29.0",
+    "ollama-ai-provider-v2": "^4.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "typescript": "^7.0.2"
+  }
+}

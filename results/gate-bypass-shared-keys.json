@@ -1,0 +1,294 @@
+{
+  "date": "2026-11-09T16:51:01.927Z",
+  "environment": {
+    "bun": "1.4.2",
+    "mastraCore": "1.82.0",
+    "mastraLibsql": "1.29.0",
+    "platform": "darwin-arm64"
+  },
+  "summary": {
+    "on": {
+      "attempts": 15,
+      "unapprovedPublished": 1,
+      "forgedPublished": 1
+    },
+    "off": {
+      "attempts": 15,
+      "unapprovedPublished": 6,
+      "forgedPublished": 6
+    }
+  },
+  "rows": [
+    {
+      "approvalCheck": "on",
+      "attempt": "resume: no payload",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "resume: empty payload",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "resume: unknown decision",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "resume: reject without comment",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "resume: reject with blank comment",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "resume: approve with smuggled text",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "resume the publish step directly",
+      "status": "threw",
+      "reason": "This workflow step \"publish\" was not suspended. Available suspended steps: [draft-and-review]",
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "timeTravel to publish, fresh run",
+      "status": "failed",
+      "reason": "no approval recorded for run g",
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "timeTravel to publish, forged review result",
+      "status": "failed",
+      "reason": "no approval recorded for run g",
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "timeTravel to publish after a real approval, other text",
+      "status": "failed",
+      "reason": "run g: text differs from the approved text",
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "timeTravel to review (dot path), forged draft + approve",
+      "status": "failed",
+      "reason": "run g: draft 1 differs from what the draft step produced",
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "timeTravel to review (array path), forged draft + approve",
+      "status": "failed",
+      "reason": "run g: draft 1 differs from what the draft step produced",
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "timeTravel to review, forged draft, then a human approves",
+      "status": "failed",
+      "reason": "run g: draft 1 differs from what the draft step produced",
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "timeTravel to publish on a run named like another run's draft record",
+      "status": "success",
+      "reason": null,
+      "unapprovedPublished": true,
+      "forgedPublished": true,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "on",
+      "attempt": "timeTravel to review on a fresh run, forged draft + approve",
+      "status": "failed",
+      "reason": "Step input validation failed: \n- question: Invalid input: expected string, received undefined\n- attempt: Invalid input: expected number, received undefined",
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "resume: no payload",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "resume: empty payload",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "resume: unknown decision",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "resume: reject without comment",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "resume: reject with blank comment",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "resume: approve with smuggled text",
+      "status": "suspended",
+      "reason": null,
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "resume the publish step directly",
+      "status": "threw",
+      "reason": "This workflow step \"publish\" was not suspended. Available suspended steps: [draft-and-review]",
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "timeTravel to publish, fresh run",
+      "status": "success",
+      "reason": null,
+      "unapprovedPublished": true,
+      "forgedPublished": true,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "timeTravel to publish, forged review result",
+      "status": "success",
+      "reason": null,
+      "unapprovedPublished": true,
+      "forgedPublished": true,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "timeTravel to publish after a real approval, other text",
+      "status": "failed",
+      "reason": "outbox key g already holds a different message",
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "timeTravel to review (dot path), forged draft + approve",
+      "status": "success",
+      "reason": null,
+      "unapprovedPublished": true,
+      "forgedPublished": true,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "timeTravel to review (array path), forged draft + approve",
+      "status": "success",
+      "reason": null,
+      "unapprovedPublished": true,
+      "forgedPublished": true,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "timeTravel to review, forged draft, then a human approves",
+      "status": "success",
+      "reason": null,
+      "unapprovedPublished": true,
+      "forgedPublished": true,
+      "stillResumable": false
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "timeTravel to publish on a run named like another run's draft record",
+      "status": "success",
+      "reason": null,
+      "unapprovedPublished": true,
+      "forgedPublished": true,
+      "stillResumable": true
+    },
+    {
+      "approvalCheck": "off",
+      "attempt": "timeTravel to review on a fresh run, forged draft + approve",
+      "status": "failed",
+      "reason": "Step input validation failed: \n- question: Invalid input: expected string, received undefined\n- attempt: Invalid input: expected number, received undefined",
+      "unapprovedPublished": false,
+      "forgedPublished": false,
+      "stillResumable": false
+    }
+  ],
+  "note": "approvals.ts as before the record split: draft and approval records in one key space (<runId>.draft.<n> and <runId>). Same gate-bypass.ts."
+}

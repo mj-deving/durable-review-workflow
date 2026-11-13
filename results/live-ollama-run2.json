@@ -1,0 +1,363 @@
+{
+  "date": "2026-11-09T15:59:31.423Z",
+  "model": "qwen3:8b",
+  "prompt": "v2 (source repo)",
+  "comment": "Bitte nenne ausdrücklich, unter welcher Bedingung die Pflicht entfällt.",
+  "summary": {
+    "cases": 10,
+    "finishedSuccess": 10,
+    "publishedExactlyOnce": 10,
+    "refusalCorrect": 8,
+    "guardBlockedDrafts": 0,
+    "drafts": 11
+  },
+  "rows": [
+    {
+      "set": "v1",
+      "id": "a50-chatbot-disclosure",
+      "expected": "answered",
+      "rejectedOnce": false,
+      "status": "success",
+      "drafts": [
+        {
+          "question": "Muss ein Chatbot den Nutzern sagen, dass sie mit einer KI sprechen?",
+          "attempt": 1,
+          "draft": "Ja, ein Chatbot muss den Nutzern sagen, dass sie mit einem KI-System interagieren, es sei denn, dies ist offensichtlich. Dies ist gemäß Artikel 50 Absatz 1 festgelegt [chunk:art50-p1].",
+          "retrieved": [
+            "art50-p1",
+            "art5-p1-ba",
+            "art50-p4",
+            "art50-p2",
+            "art5-p1-a"
+          ],
+          "guardBlocked": false,
+          "__workflow_meta": {
+            "runId": "a50-chatbot-disclosure",
+            "path": [
+              "review"
+            ]
+          },
+          "ms": 7225,
+          "citationValid": 1
+        }
+      ],
+      "published": 1,
+      "refused": false,
+      "refusalCorrect": 1,
+      "guardBlockedAny": false,
+      "totalMs": 7233
+    },
+    {
+      "set": "v1",
+      "id": "a50-chatbot-exception",
+      "expected": "answered",
+      "rejectedOnce": true,
+      "status": "success",
+      "drafts": [
+        {
+          "question": "Wann entfällt die Pflicht, Personen über die Interaktion mit einem KI-System zu informieren?",
+          "attempt": 1,
+          "draft": "Die Pflicht, Personen über die Interaktion mit einem KI-System zu informieren, entfällt, wenn die Nutzung des Systems zur Aufdeckung, Verhütung, Ermittlung oder Verfolgung von Straftaten gesetzlich zugelassen ist und geeignete Schutzvorkehrungen für die Rechte und Freiheiten Dritter bestehen [chunk:art50-p1].",
+          "retrieved": [
+            "art50-p1",
+            "art50-p3",
+            "art50-p6",
+            "art50-p4",
+            "art26-p5"
+          ],
+          "guardBlocked": false,
+          "__workflow_meta": {
+            "runId": "a50-chatbot-exception",
+            "path": [
+              "review"
+            ]
+          },
+          "ms": 7301,
+          "citationValid": 1
+        },
+        {
+          "question": "Wann entfällt die Pflicht, Personen über die Interaktion mit einem KI-System zu informieren?",
+          "attempt": 2,
+          "draft": "Die Pflicht, Personen über die Interaktion mit einem KI-System zu informieren, entfällt, wenn die Nutzung des Systems zur Aufdeckung, Verhütung, Ermittlung oder Verfolgung von Straftaten gesetzlich zugelassen ist und geeignete Schutzvorkehrungen für die Rechte und Freiheiten Dritter bestehen [chunk:art50-p1].",
+          "retrieved": [
+            "art50-p1",
+            "art50-p3",
+            "art50-p6",
+            "art50-p4",
+            "art26-p5"
+          ],
+          "guardBlocked": false,
+          "__workflow_meta": {
+            "runId": "a50-chatbot-exception",
+            "path": [
+              "review"
+            ]
+          },
+          "ms": 15370,
+          "citationValid": 1
+        }
+      ],
+      "published": 1,
+      "refused": false,
+      "refusalCorrect": 1,
+      "guardBlockedAny": false,
+      "totalMs": 15373
+    },
+    {
+      "set": "v1",
+      "id": "a50-machine-readable",
+      "expected": "answered",
+      "rejectedOnce": false,
+      "status": "success",
+      "drafts": [
+        {
+          "question": "Wie müssen synthetische Audio-, Bild-, Video- oder Textinhalte von KI-Systemen gekennzeichnet werden?",
+          "attempt": 1,
+          "draft": "Synthetische Audio-, Bild-, Video- oder Textinhalte von KI-Systemen müssen in einem maschinenlesbaren Format gekennzeichnet und als künstlich erzeugt oder manipuliert erkennbar sein. Die Anbieter sorgen dafür, dass ihre technischen Lösungen wirksam, interoperabel, belastbar und zuverlässig sind [chunk:art50-p2]. Diese Pflicht gilt nicht, soweit die KI-Systeme eine unterstützende Funktion für die Standardbearbeitung ausführen oder die vom Betreiber bereitgestellten Eingabedaten oder deren Semantik nicht wesentlich verändern oder wenn sie zur Aufdeckung, Verhütung, Ermittlung oder Verfolgung von Straftaten gesetzlich zugelassen sind [chunk:art50-p2].",
+          "retrieved": [
+            "art50-p2",
+            "art5-p1-ba",
+            "art50-p4",
+            "art50-p1",
+            "art6-p1"
+          ],
+          "guardBlocked": false,
+          "__workflow_meta": {
+            "runId": "a50-machine-readable",
+            "path": [
+              "review"
+            ]
+          },
+          "ms": 10277,
+          "citationValid": 1
+        }
+      ],
+      "published": 1,
+      "refused": false,
+      "refusalCorrect": 1,
+      "guardBlockedAny": false,
+      "totalMs": 10279
+    },
+    {
+      "set": "v1",
+      "id": "a50-deepfake",
+      "expected": "answered",
+      "rejectedOnce": false,
+      "status": "success",
+      "drafts": [
+        {
+          "question": "Was müssen Betreiber eines KI-Systems tun, das Deepfakes erzeugt?",
+          "attempt": 1,
+          "draft": "Betreiber eines KI-Systems, das Deepfakes erzeugt, müssen offenlegen, dass die Inhalte künstlich erzeugt oder manipuliert wurden. Diese Pflicht gilt nicht, wenn die Verwendung zur Aufdeckung, Verhütung, Ermittlung oder Verfolgung von Straftaten gesetzlich zugelassen ist. [chunk:art50-p4]",
+          "retrieved": [
+            "art50-p4",
+            "art26-p5",
+            "art50-p1",
+            "art50-p2",
+            "art5-p1-ba"
+          ],
+          "guardBlocked": false,
+          "__workflow_meta": {
+            "runId": "a50-deepfake",
+            "path": [
+              "review"
+            ]
+          },
+          "ms": 8027,
+          "citationValid": 1
+        }
+      ],
+      "published": 1,
+      "refused": false,
+      "refusalCorrect": 1,
+      "guardBlockedAny": false,
+      "totalMs": 8030
+    },
+    {
+      "set": "v1",
+      "id": "a50-satire",
+      "expected": "answered",
+      "rejectedOnce": false,
+      "status": "success",
+      "drafts": [
+        {
+          "question": "Gilt die Offenlegungspflicht für Deepfakes auch in vollem Umfang bei satirischen oder künstlerischen Werken?",
+          "attempt": 1,
+          "draft": "Die Offenlegungspflicht für Deepfakes gilt in vollem Umfang nicht bei satirischen oder künstlerischen Werken. Laut Artikel 50 Absatz 4 der KI-Verordnung beschränken sich die Transparenzpflichten in solchen Fällen darauf, das Vorhandensein erzeugter oder manipulierter Inhalte in geeigneter Weise offenzulegen, ohne den Genuss des Werks zu beeinträchtigen. [chunk:art50-p4]",
+          "retrieved": [
+            "art50-p4",
+            "art50-p2",
+            "art26-p9",
+            "art5-p1-ba",
+            "art5-p1-e"
+          ],
+          "guardBlocked": false,
+          "__workflow_meta": {
+            "runId": "a50-satire",
+            "path": [
+              "review"
+            ]
+          },
+          "ms": 7646,
+          "citationValid": 1
+        }
+      ],
+      "published": 1,
+      "refused": false,
+      "refusalCorrect": 1,
+      "guardBlockedAny": false,
+      "totalMs": 7649
+    },
+    {
+      "set": "v1",
+      "id": "ooc-gdpr-fine",
+      "expected": "refused",
+      "rejectedOnce": false,
+      "status": "success",
+      "drafts": [
+        {
+          "question": "Wie hoch sind die Bußgelder nach der DSGVO?",
+          "attempt": 1,
+          "draft": "[KEINE_GRUNDLAGE] Die abgerufenen Auszüge enthalten dazu keine Grundlage.",
+          "retrieved": [],
+          "guardBlocked": false,
+          "__workflow_meta": {
+            "runId": "ooc-gdpr-fine",
+            "path": [
+              "review"
+            ]
+          },
+          "ms": 780,
+          "citationValid": 1
+        }
+      ],
+      "published": 1,
+      "refused": true,
+      "refusalCorrect": 1,
+      "guardBlockedAny": false,
+      "totalMs": 783
+    },
+    {
+      "set": "heldout",
+      "id": "h-a50-public-deepfake-crime",
+      "expected": "answered",
+      "rejectedOnce": false,
+      "status": "success",
+      "drafts": [
+        {
+          "question": "Gibt es eine Ausnahme von der Deepfake-Offenlegungspflicht für die Strafverfolgung?",
+          "attempt": 1,
+          "draft": "Ja, es gibt eine Ausnahme von der Deepfake-Offenlegungspflicht für die Strafverfolgung. Die Pflicht zur Offenlegung, dass Inhalte künstlich erzeugt oder manipuliert wurden, gilt nicht, wenn die Verwendung zur Aufdeckung, Verhütung, Ermittlung oder Verfolgung von Straftaten gesetzlich zugelassen ist [chunk:art50-p4].",
+          "retrieved": [
+            "art50-p4",
+            "art5-p2-0",
+            "art5-p1-h",
+            "art5-p2-b",
+            "art26-p10-0"
+          ],
+          "guardBlocked": false,
+          "__workflow_meta": {
+            "runId": "h-a50-public-deepfake-crime",
+            "path": [
+              "review"
+            ]
+          },
+          "ms": 11043,
+          "citationValid": 1
+        }
+      ],
+      "published": 1,
+      "refused": false,
+      "refusalCorrect": 1,
+      "guardBlockedAny": false,
+      "totalMs": 11045
+    },
+    {
+      "set": "heldout",
+      "id": "h-a99-midcap",
+      "expected": "answered",
+      "rejectedOnce": false,
+      "status": "success",
+      "drafts": [
+        {
+          "question": "Was gilt bei Geldbußen für kleine Midcap-Unternehmen?",
+          "attempt": 1,
+          "draft": "[KEINE_GRUNDLAGE] Die abgerufenen Auszüge enthalten dazu keine Grundlage.",
+          "retrieved": [],
+          "guardBlocked": false,
+          "__workflow_meta": {
+            "runId": "h-a99-midcap",
+            "path": [
+              "review"
+            ]
+          },
+          "ms": 818,
+          "citationValid": 1
+        }
+      ],
+      "published": 1,
+      "refused": true,
+      "refusalCorrect": 0,
+      "guardBlockedAny": false,
+      "totalMs": 823
+    },
+    {
+      "set": "heldout",
+      "id": "h-a113-art102",
+      "expected": "answered",
+      "rejectedOnce": false,
+      "status": "success",
+      "drafts": [
+        {
+          "question": "Ab wann gelten die Artikel 102 bis 110?",
+          "attempt": 1,
+          "draft": "[KEINE_GRUNDLAGE] Die abgerufenen Auszüge enthalten dazu keine Grundlage.",
+          "retrieved": [],
+          "guardBlocked": false,
+          "__workflow_meta": {
+            "runId": "h-a113-art102",
+            "path": [
+              "review"
+            ]
+          },
+          "ms": 802,
+          "citationValid": 1
+        }
+      ],
+      "published": 1,
+      "refused": true,
+      "refusalCorrect": 0,
+      "guardBlockedAny": false,
+      "totalMs": 804
+    },
+    {
+      "set": "heldout",
+      "id": "h-ooc-copyright",
+      "expected": "refused",
+      "rejectedOnce": false,
+      "status": "success",
+      "drafts": [
+        {
+          "question": "Welche Urheberrechtspflichten haben Anbieter von KI-Modellen mit allgemeinem Verwendungszweck beim Training?",
+          "attempt": 1,
+          "draft": "[KEINE_GRUNDLAGE] Die abgerufenen Auszüge enthalten dazu keine Grundlage.",
+          "retrieved": [],
+          "guardBlocked": false,
+          "__workflow_meta": {
+            "runId": "h-ooc-copyright",
+            "path": [
+              "review"
+            ]
+          },
+          "ms": 870,
+          "citationValid": 1
+        }
+      ],
+      "published": 1,
+      "refused": true,
+      "refusalCorrect": 1,
+      "guardBlockedAny": false,
+      "totalMs": 873
+    }
+  ]
+}
